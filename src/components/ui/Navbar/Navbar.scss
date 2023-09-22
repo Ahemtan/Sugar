@@ -1,0 +1,108 @@
+@import '../../../config/mixins.scss';
+
+.navbar {
+    width: 100%;
+    padding: 0 4%;
+    z-index: 99;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    height: 70px;
+    @include md {
+        padding: 0 2%;
+        height: 80px;
+    }
+    .navbar-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+        .left {
+            width: 150px;
+            img {
+                width: 100%;
+            }
+        }
+        .center {
+            transition: 400ms ease-in-out;  
+            transform: translateY(-3px);
+            a {
+                margin: 0 8px;
+                text-decoration: none;
+                color: black;
+                position: relative;
+                @include md {
+                    font-size: 1.5rem;
+                    margin: 20px 0;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: black;
+                    transition: .3s ease;
+                }
+                &:hover:before {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: black;
+                }
+                &.active::before {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: black;
+                }
+            }   
+            
+            @include md {
+                position: absolute;
+                top: 0;
+                left: 0;
+                backdrop-filter: blur(16px);
+                background-color: rgba($color: #000000, $alpha: .3);
+                width: 350px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 40px 30px;
+            }
+            @include sm {
+                width: 250px;
+            }
+        }
+        .right {
+            font-size: 1.2rem;
+            display: flex;
+            gap: 8px;
+            @include md {
+                font-size: 1.5rem;
+                align-items: center;
+            }
+            .bars {
+                display: none;
+                @include md {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+.stickey {
+    position: fixed;
+    backdrop-filter: blur(5px);
+}

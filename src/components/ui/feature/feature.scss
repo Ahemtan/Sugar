@@ -1,0 +1,23 @@
+@import '../../../config/mixins.scss';
+
+.feature-section  {
+    margin: 0 20px;
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1 {
+            text-transform: capitalize;
+        }
+    }
+    .bottom {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap;
+        flex-basis: 25%;
+        @include sm {
+            flex-basis: 100%;
+        }
+    }
+}
