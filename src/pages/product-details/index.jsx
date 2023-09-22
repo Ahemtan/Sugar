@@ -4,17 +4,18 @@ import { useSelector, useDispatch } from "react-redux";
 import "./product-details.scss";
 import FeatureProduct from "../../components/ui/feature";
 import { useEffect } from "react";
-// import { getProductDetails } from "../../redux/action/productAction";
+import { getProductDetails } from "../../redux/action/productAction";
 
 const ProductDetails = () => {
-  // const { id } = useParams();
+  const { id } = useParams();
 
-  // const dispatch = useDispatch()
-  // const {} = useSelector(state=>state.productDetails)
+  const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   dispatch(getProductDetails(id))
-  // }, [dispatch])
+  const { error, product, loading } = useSelector((state) => state.productDetail)
+
+  useEffect(() => {
+    dispatch(getProductDetails(id))
+  }, [dispatch, id])
 
   return (
     <>
@@ -32,9 +33,9 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className="col-2">
-            <p>Tshirt</p>
-            <h1>NAME</h1>
-            <h4>रु 24</h4>
+            <p>{product.category}</p>
+            <h1>{product.name}</h1>
+            <h4>रु {product.price}</h4>
             <select>
               <option>Select Size</option>
               <option>xxl</option>
@@ -43,9 +44,9 @@ const ProductDetails = () => {
               <option>xxl</option>
             </select>
             <input defaultValue={"1"} type="number" />
-            <button className="btn">Add to cart</button>
+            <button disabled={false} className="btn">Add to cart</button>
             <h3>Product Details</h3>
-            <p>desctra</p>
+            <p>{product.description}</p>
           </div>
         </div>
       </div>
