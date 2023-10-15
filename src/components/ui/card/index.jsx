@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
 import "./card.scss";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ data }) => {
+const Card = ({ data, href }) => {
+  let navigate = useNavigate(); 
+  const routeChange = () =>{ 
+    let path = `${href}`; 
+    navigate(path);
+  }
   return (
-    <Link to={`/products/${data._id}`}>
-      <div className="card">
+      <div onClick={routeChange} className="card">
         <div className="image">
           <img src="/images/Black3.png" alt="name" className="primary-image" />
         </div>
@@ -13,7 +17,6 @@ const Card = ({ data }) => {
           <h3>रु {data.price}</h3>
         </div>
       </div>
-    </Link>
   );
 };
 

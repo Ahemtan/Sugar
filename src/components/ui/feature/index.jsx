@@ -4,7 +4,7 @@ import { getProduct } from "../../../redux/action/productAction";
 import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CardSkeleton from "../skeleton/card-skeleton";
 
@@ -14,7 +14,7 @@ const FeatureProduct = ({ type }) => {
     (state) => state.products
   );
   if (error) {
-    toast.error(error);
+    toast.error(error, { toastId: '_error', });
   }
   useEffect(() => {
     dispatch(getProduct());
@@ -33,7 +33,7 @@ const FeatureProduct = ({ type }) => {
             <>
               {products ? (
                 products.map((product) => (
-                  <Card key={product._id} data={product} />
+                  <Card key={product._id} href={`/products/${product._id}`} data={product} />
                 ))
               ) : (
                 <h1>NO PRODUCT FOUND</h1>
@@ -42,7 +42,6 @@ const FeatureProduct = ({ type }) => {
           )}
         </div>
       </div>
-      <ToastContainer />
     </>
   );
 };
