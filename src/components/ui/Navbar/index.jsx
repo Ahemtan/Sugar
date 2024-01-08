@@ -1,83 +1,60 @@
-import { Link } from "react-router-dom";
-import { FaBars, FaSearch, FaTimes } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-
-import "./Navbar.scss";
+import { FaHeart, FaPersonBooth, FaPhone, FaSearch, FaUser } from "react-icons/fa";
+import "./Navbar.scss"
+import HeaderTop from "./headerTop";
+import DesktopNav from "./desktopNav";
+import MobileMenu from "./mobileMenu";
 
 const Navbar = () => {
-
-  const [toggle, setToggle] = useState(false)
-  const [fix, setFix] = useState(false)
-
-  const setFixed = () => {
-    const offestY = window.scrollY
-    if (offestY >= 80) {
-      setFix(true)
-    } else {
-      setFix(false)
-    }
-  }
-
-  
-  const handleToggle = () => {
-    setToggle(!toggle)
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", setFixed)
-  }, [])
-
-  const links = [
-    {
-      name : 'Home',
-      href: ''
-    },
-    {
-      name : 'Product',
-      href: 'products'
-    },
-    {
-      name : 'Catalog',
-      href: 'catalog'
-    },
-    {
-      name : 'About',
-      href: 'about'
-    },
-    {
-      name : 'Contact',
-      href: 'contact'
-    }
-  ]
-
   return (
-    <div className={fix ? `navbar stickey` : `navbar`}>
-      <div className="navbar-content">
-        <Link to={"/"} className="left"><img src="/images/Logo.png" alt="LOGO"/></Link>
+    <header>
+      <HeaderTop />
 
-        <div style={{ left : toggle ? '0' : '-200%'}} className="center">
-          {
-            links.map((link) => (
-              <NavLink
-                to={`/${link.href}`}
-                className={({ isActive }) =>
-                  isActive ? "active" : ""
-                }
-                key={link.href}
-              >
-                {link.name}
-              </NavLink>
-            ))
-          }
-        </div>
+      <div className="header-main">
 
-        <div className="right">
-            <span className="bars" onClick={handleToggle}>{ toggle ? <FaTimes /> : <FaBars /> }</span>
-            <FaSearch />
+        <div className="container">
+
+          <a href="/" className="header-logo">
+            <img src="/images/Logo.png" alt="" width={150} height={36} />
+          </a>
+
+          <div className="header-search-container">
+
+            <input type="search" name="search" placeholder="Enter Product Name" className="search-field" />
+
+            <button className="search-btn">
+
+              <FaSearch />
+
+            </button>
+
+          </div>
+
+          <div className="header-user-action">
+
+            <button className="action-btn">
+              <FaUser />
+            </button>
+            
+
+            <button className="action-btn">
+              <FaHeart />
+              <span className="count">0</span>
+            </button>
+
+            <button className="action-btn">
+              <FaPhone />
+            </button>
+
+          </div>
+
         </div>
       </div>
-    </div>
+
+      <DesktopNav />
+
+      <MobileMenu />
+
+    </header>
   );
 };
 

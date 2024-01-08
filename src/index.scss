@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import "./config/Variables";
+@import "./config/mixins";
+
+body {
+  font-family: 'poppins', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+img, ion-icon, button, a { display: block; }
+
+span { display: inline-block; }
+
+html {
+  font-family: "Poppins", sans-serif;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+input::-webkit-input-placeholder { font: inherit; }
+
+input::-moz-placeholder { font: inherit; }
+
+input:-ms-input-placeholder { font: inherit; }
+
+input::-ms-input-placeholder { font: inherit; }
+
+input::placeholder { font: inherit; }
+
+body { background: var(--white); }
+
+body {
+  background-color: $white;
+}
+
+body::-webkit-scrollbar { width: 15px; }
+
+body::-webkit-scrollbar-track {
+  background: var(--white);
+  border-left: 1px solid var(--cultured);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: hsl(0, 0%, 80%);
+  border: 3px solid var(--white);
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
+
+.has-scrollbar {
+  padding-bottom: 5px;
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: 3px solid $white;
+    border-radius: 20px;
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 90%);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 90%);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: black;
+  color: #fff;
+  padding: 8px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  outline: 0;
+  border: 0;
+}
+
+.none {
+  display: none;
+}
+
+a, button {
+  color: black;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1350px;
+  margin: auto;
+  @include xxl {
+    max-width: 1350px;
+  }
+  @include xl {
+    max-width: 1200px;
+  }
+  @include lg {
+    max-width: 980px;
+  }
+  @include md {
+    max-width: 750px;
+  }
+
+}
