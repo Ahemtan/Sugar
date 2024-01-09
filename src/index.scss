@@ -114,17 +114,10 @@ a, button {
   padding: 0 15px;
   max-width: 1350px;
   margin: auto;
-  @include xxl {
-    max-width: 1350px;
-  }
-  @include xl {
-    max-width: 1200px;
-  }
-  @include lg {
-    max-width: 980px;
-  }
-  @include md {
-    max-width: 750px;
-  }
-
+}
+@media (max-width: 640px) {
+  .center {
+    display: flex;
+    justify-content: center !important;
+  } 
 }

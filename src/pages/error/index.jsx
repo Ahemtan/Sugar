@@ -1,10 +1,10 @@
 import './error.scss';
 
-const ErrorPage = () => {
+const ErrorPage = ({ messgae, code }) => {
   return (
     <div className='error'>
-        <h1>Opps!</h1>
-        <p>Page not found!</p>
+      <h1>{code || "Opps!"}</h1>
+      <p>{messgae || 'Page not Found'}</p>
     </div>
   )
 }

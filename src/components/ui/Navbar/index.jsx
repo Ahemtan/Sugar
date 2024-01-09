@@ -12,42 +12,30 @@ const Navbar = () => {
       <div className="header-main">
 
         <div className="container">
-
-          <a href="/" className="header-logo">
-            <img src="/images/Logo.png" alt="" width={150} height={36} />
+          <a href="#" className="header-logo">
+            <img src="/images/Logo.png" alt="Sugar's logo" width={120} height={36} />
           </a>
-
           <div className="header-search-container">
-
-            <input type="search" name="search" placeholder="Enter Product Name" className="search-field" />
-
+            <input type="search" name="search" className="search-field" placeholder="Enter your product name..." />
             <button className="search-btn">
-
-              <FaSearch />
-
+              <ion-icon name="search-outline" />
             </button>
-
           </div>
-
-          <div className="header-user-action">
-
+          <div className="header-user-actions">
             <button className="action-btn">
-              <FaUser />
+              <ion-icon name="person-outline" />
             </button>
-            
-
             <button className="action-btn">
-              <FaHeart />
+              <ion-icon name="heart-outline" />
               <span className="count">0</span>
             </button>
-
             <button className="action-btn">
-              <FaPhone />
+              <ion-icon name="bag-handle-outline" />
+              <span className="count">0</span>
             </button>
-
           </div>
-
         </div>
+
       </div>
 
       <DesktopNav />

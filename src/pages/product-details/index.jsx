@@ -5,7 +5,6 @@ import "./product-details.scss";
 import FeatureProduct from "../../components/ui/feature";
 import { useEffect } from "react";
 import { getProductDetails } from "../../redux/action/productAction";
-import { toast } from "react-toastify";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import ErrorPage from "../error";
@@ -25,8 +24,7 @@ const ProductDetails = () => {
 
   if (error) {
     return (
-      toast.error(error,{toastId: '_details_error',}),
-      <ErrorPage />
+      <ErrorPage code={"500"} messgae={"Someting went worng!"} />
     );
   } else {
     return (

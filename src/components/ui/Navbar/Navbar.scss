@@ -1,32 +1,15 @@
 @import "../../../config/mixins.scss";
 @import "../../../config/Variables";
 
-.header-user-action,
+.header-top,
+.header-user-actions,
 .desktop-navigation-menu {
-  display: block;
-
-  @include lg {
-    display: none;
-  }
+  display: none;
 }
 
 .header-main {
   padding: 20px 0;
   border-bottom: 1px solid $cultured;
-
-  @include xsm {
-    padding: 25px 0;
-  }
-}
-
-.header-top .continer,
-.header-main, .continer {
-
-  @include sm {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  }
 }
 
 .header-logo {
@@ -34,10 +17,6 @@
 
   img {
     margin: auto;
-  }
-
-  @include sm {
-    margin-bottom: 0;
   }
 }
 
@@ -74,19 +53,21 @@
 }
 
 .mobile-button-navigation {
-  background: $white;
+  background-color: white;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border-radius: 20px 20px 0 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: auto;
-  display: none;
+  display: flex;
   justify-content: space-around;
+  align-items: center;
+  padding: 5px;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
-  z-index: 99;
+  z-index: 5;
+  
 
   .action-btn {
     position: relative;
@@ -106,15 +87,6 @@
     line-height: 1;
     padding: 2px 4px;
     border-radius: 20px;
-  }
-
-  @include xsm {
-    border-top-left-radius: $border-radius-md;
-    border-top-right-radius: $border-radius-md;
-  }
-
-  @include lg {
-    display: flex;
   }
 }
 
@@ -279,63 +251,27 @@
   }
 }
 
-.header-top {
-  @include xsm {
-    display: none;
-    padding: 10px 0;
-    border-bottom: 1px solid $cultured;
-  }
-}
+// @include sm {
 
+//   .header-top .container,
+//   .header-main .container {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
 
-.header-social-container,
-.header-top-actions {
-  display: block;
-}
+//   .header-logo {
+//     margin-bottom: 0;
+//   }
+// }
 
-.header-alert-news {
-  color: $sonic-silver;
-  font-size: $fs-9;
-  text-transform: uppercase;
-
-  b {
-    font-weight: $weight-500;
-  }
-}
-
-
-.header-top .continer,
-.header-main .continer {
-  @include sm {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.header-top-actions {
-  @include sm {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
-.header-social-container {
-  @include lg {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-}
-
-.desktop-navigation-menu {
-  display: block;
-
-  @include lg {
-    display: none;
-  }
-}
+// .header-social-container {
+//   @include lg {
+//     display: flex;
+//     align-items: center;
+//     gap: 5px;
+//   }
+// }
 
 .desktop-menu-category-list {
   position: relative;
@@ -400,7 +336,6 @@
     z-index: 5;
 
     .dropdown-panel-list {
-
       .menu-title {
         a {
           color: $onyx;
@@ -409,7 +344,6 @@
           padding-bottom: 10px;
           border-bottom: 1px solid $cultured;
         }
-
       }
 
       .panel-list-item a {
@@ -430,7 +364,6 @@
           margin-top: 20px;
         }
       }
-
     }
   }
 
@@ -459,7 +392,7 @@
     z-index: 5;
   }
 
-  .menu-category:hover > .dropdown-list {
+  .menu-category:hover>.dropdown-list {
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
@@ -479,4 +412,34 @@
       }
     }
   }
+}
+
+// Style for display more than 480px
+
+@include xsm {
+  .header-top {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid $cultured;
+  }
+
+  .header-social-container {
+    display: none;
+  }
+  
+  .header-alert-news {
+    color: $sonic-silver;
+    font-size: $fs-9;
+    text-transform: uppercase;
+  
+    b {
+      font-weight: $weight-500;
+    }
+  }
+
+  .header-main {
+    padding: 25px 0;
+  }
+
+
 }
