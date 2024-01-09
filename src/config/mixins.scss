@@ -5,7 +5,7 @@
 }
 
 @mixin sm {
-    @media only screen and (min-width: 640px) {
+    @media only screen and (min-width: 570px) {
         @content;
     }
 }
@@ -29,7 +29,7 @@
 }
 
 @mixin xxl {
-    @media only screen and (min-width: 1536px) {
+    @media only screen and (min-width: 1400px) {
         @content;
     }
 }

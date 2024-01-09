@@ -1,4 +1,4 @@
-import { FaHeart, FaPersonBooth, FaPhone, FaSearch, FaUser } from "react-icons/fa";
+import { FaCartPlus, FaHeart, FaPersonBooth, FaPhone, FaSearch, FaUser } from "react-icons/fa";
 import "./Navbar.scss"
 import HeaderTop from "./headerTop";
 import DesktopNav from "./desktopNav";
@@ -18,19 +18,19 @@ const Navbar = () => {
           <div className="header-search-container">
             <input type="search" name="search" className="search-field" placeholder="Enter your product name..." />
             <button className="search-btn">
-              <ion-icon name="search-outline" />
+              <FaSearch />
             </button>
           </div>
           <div className="header-user-actions">
             <button className="action-btn">
-              <ion-icon name="person-outline" />
+             <FaUser />
             </button>
             <button className="action-btn">
-              <ion-icon name="heart-outline" />
+              <FaHeart />
               <span className="count">0</span>
             </button>
             <button className="action-btn">
-              <ion-icon name="bag-handle-outline" />
+              <FaCartPlus />
               <span className="count">0</span>
             </button>
           </div>

@@ -67,7 +67,7 @@
   padding: 5px;
   box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
   z-index: 5;
-  
+
 
   .action-btn {
     position: relative;
@@ -251,28 +251,6 @@
   }
 }
 
-// @include sm {
-
-//   .header-top .container,
-//   .header-main .container {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//   }
-
-//   .header-logo {
-//     margin-bottom: 0;
-//   }
-// }
-
-// .header-social-container {
-//   @include lg {
-//     display: flex;
-//     align-items: center;
-//     gap: 5px;
-//   }
-// }
-
 .desktop-menu-category-list {
   position: relative;
   display: flex;
@@ -423,15 +401,16 @@
     border-bottom: 1px solid $cultured;
   }
 
-  .header-social-container {
+  .header-social-container,
+  .header-top-actions {
     display: none;
   }
-  
+
   .header-alert-news {
     color: $sonic-silver;
     font-size: $fs-9;
     text-transform: uppercase;
-  
+
     b {
       font-weight: $weight-500;
     }
@@ -441,5 +420,130 @@
     padding: 25px 0;
   }
 
+  .mobile-button-navigation {
+    border-top-right-radius: $border-radius-md;
+    border-top-left-radius: $border-radius-md;
+  }
 
+}
+
+// Style for display more than 570px
+
+@include sm {
+
+  .header-top .container,
+  .header-main .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    margin-bottom: 0;
+  }
+
+  .header-top-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .header-top-actions select {
+    border: none;
+    display: block;
+    min-width: 80px;
+    padding: 5px 0;
+    font: inherit;
+    color: $sonic-silver;
+    font-size: $fs-8;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: $transition-timing;
+
+    &:hover {
+      color: $eerie-black;
+    }
+  }
+
+  .header-search-container {
+    min-width: 300px;
+  }
+
+}
+
+// Style for display more than 768px
+@include md {
+  .header-main .container {
+    gap: 80px;
+  }
+
+  .header-search-container {
+    flex-grow: 1;
+  }
+}
+
+// Style for display more than 1024px
+@include lg {
+
+  .header-social-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .header-social-container .social-link {
+    padding: 5px;
+    background: hsla(0, 0%, 95%, );
+    border-radius: $border-radius-sm;
+    color: $sonic-silver;
+    transition: $transition-timing;
+
+    &:hover {
+      background: $salmon-pink;
+      color: $white;
+    }
+  }
+
+  .header-user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .count {
+      position: absolute;
+      top: -2px;
+      right: -3px;
+      background: $bittersweet;
+      color: $white;
+      font-size: 12px;
+      font-weight: $weight-500;
+      line-height: 1;
+      padding: 2px 4px;
+      border-radius: 20px;
+    }
+
+    .action-btn {
+      position: relative;
+      font-size: 25px;
+      color: $onyx;
+      padding: 5px;
+    }
+
+  }
+
+  .desktop-navigation-menu {
+    display: block;
+  }
+
+  .mobile-button-navigation {
+    display: none;
+  }
+
+}
+
+// Style for display more than 1200px
+@include xl {
+  .desktop-menu-category-list {
+    gap: 45px;
+  }
 }

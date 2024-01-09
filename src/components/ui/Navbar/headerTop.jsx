@@ -27,12 +27,23 @@ const HeaderTop = () => {
                         </a>
                     </li>
                 </ul>
+
                 <div className="header-alert-news">
                     <p>
-                        <b>Free Shipping</b>
-                        This Week Order Over - $55
+                        <b>Free Shipping</b> 
+                        This Week Order Over - रू5,500
                     </p>
                 </div>
+
+                <div className="header-top-actions">
+                    <select name="currency">
+                        <option value="nrp">NRP रू</option>
+                    </select>
+                    <select name="language">
+                        <option value="en-US">English</option>
+                    </select>
+                </div>
+
             </div>
         </div>
 

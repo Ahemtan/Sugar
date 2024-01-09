@@ -6,16 +6,22 @@ body {
   font-family: 'poppins', sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a {
+  text-decoration: none;
+}
 
-li { list-style: none; }
+li {
+  list-style: none;
+}
 
 button {
   background: none;
@@ -24,14 +30,21 @@ button {
   cursor: pointer;
 }
 
-img, ion-icon, button, a { display: block; }
+img,
+ion-icon,
+button,
+a {
+  display: block;
+}
 
-span { display: inline-block; }
+span {
+  display: inline-block;
+}
 
 html {
   font-family: "Poppins", sans-serif;
   -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
+  overscroll-behavior: contain;
 }
 
 input {
@@ -40,23 +53,37 @@ input {
   font: inherit;
 }
 
-input::-webkit-input-placeholder { font: inherit; }
+input::-webkit-input-placeholder {
+  font: inherit;
+}
 
-input::-moz-placeholder { font: inherit; }
+input::-moz-placeholder {
+  font: inherit;
+}
 
-input:-ms-input-placeholder { font: inherit; }
+input:-ms-input-placeholder {
+  font: inherit;
+}
 
-input::-ms-input-placeholder { font: inherit; }
+input::-ms-input-placeholder {
+  font: inherit;
+}
 
-input::placeholder { font: inherit; }
+input::placeholder {
+  font: inherit;
+}
 
-body { background: var(--white); }
+body {
+  background: var(--white);
+}
 
 body {
   background-color: $white;
 }
 
-body::-webkit-scrollbar { width: 15px; }
+body::-webkit-scrollbar {
+  width: 15px;
+}
 
 body::-webkit-scrollbar-track {
   background: var(--white);
@@ -67,25 +94,31 @@ body::-webkit-scrollbar-thumb {
   background: hsl(0, 0%, 80%);
   border: 3px solid var(--white);
   -webkit-border-radius: 10px;
-          border-radius: 10px;
+  border-radius: 10px;
 }
 
-body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
+body::-webkit-scrollbar-thumb:hover {
+  background: hsl(0, 0%, 70%);
+}
 
 .has-scrollbar {
   padding-bottom: 5px;
+
   &::-webkit-scrollbar {
     width: 12px;
     height: 12px;
   }
+
   &::-webkit-scrollbar-thumb {
     background: transparent;
     border: 3px solid $white;
     border-radius: 20px;
   }
+
   &:hover::-webkit-scrollbar-thumb {
     background: hsl(0, 0%, 90%);
   }
+
   &::-webkit-scrollbar-thumb:hover {
     background: hsl(0, 0%, 90%);
   }
@@ -106,18 +139,49 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
   display: none;
 }
 
-a, button {
+a,
+button {
   color: black;
 }
 
-.container {
-  padding: 0 15px;
-  max-width: 1350px;
-  margin: auto;
+//restyling according to screen size
+
+@include sm {
+  $fs-1: 1.875rem;
 }
-@media (max-width: 640px) {
-  .center {
-    display: flex;
-    justify-content: center !important;
-  } 
+
+@include md {
+
+  html {
+    font-size: 17px;
+  }
+
+  $fs-1: 2.375rem;
+
+  .container {
+    max-width: 750px;
+    margin: auto;
+  }
+}
+
+@include lg {
+
+  $fs-1: 2.625rem;
+  $fs-2: 1.125rem;
+
+  .container {
+    max-width: 980px;
+  }
+}
+
+@include xl {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@include xxl {
+  .container {
+    max-width: 1350px;
+  }
 }
