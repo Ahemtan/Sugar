@@ -10,10 +10,10 @@
         flex-wrap: wrap;
         justify-content: center;
         .col-2{
-            flex-basis: 50%;
+            flex-basis: 100%;
             min-width: 300px;
             @include md {
-                flex-basis: 100%;
+                flex-basis: 50%;
             }
             img {
                 max-width: 100%;

@@ -1,23 +1,45 @@
 @import '../../../config/mixins.scss';
+@import "../../../config/Variables";
 
-.feature-section  {
-    margin: 0 20px;
-    .top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        h1 {
-            text-transform: capitalize;
-        }
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.features {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+    flex-direction: row;
+    @include sm {
+        padding: 50px;
     }
-    .bottom {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-        flex-wrap: wrap;
-        flex-basis: 25%;
-        @include sm {
-            flex-basis: 100%;
+	.feature {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.featureIcon {
+		width: 50px;
+		height: 50px;
+        svg {
+            color: $salmon-pink;
         }
-    }
+	}
+}
+
+.feature {
+	.title {
+		font-size: $fs-1;
+		font-weight: 600;
+		margin: 16px;
+	}
+	.desc {
+		color: #888;
+		width: 75%;
+		height: 100px;
+		text-transform: capitalize;
+	}
 }

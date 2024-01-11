@@ -3,6 +3,7 @@ import "./Navbar.scss"
 import HeaderTop from "./headerTop";
 import DesktopNav from "./desktopNav";
 import MobileMenu from "./mobileMenu";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -12,9 +13,9 @@ const Navbar = () => {
       <div className="header-main">
 
         <div className="container">
-          <a href="#" className="header-logo">
+          <NavLink to={"/"} className="header-logo">
             <img src="/images/Logo.png" alt="Sugar's logo" width={120} height={36} />
-          </a>
+          </NavLink>
           <div className="header-search-container">
             <input type="search" name="search" className="search-field" placeholder="Enter your product name..." />
             <button className="search-btn">
