@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaBars, FaBoxes, FaHeart, FaHome, FaPlus, FaMinus, FaTruck, FaTimes, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { IoCaretBack } from "react-icons/io5";
 import Submenu from './submenu';
-import { Navigate } from 'react-router-dom';
+import { NavLink, Navigate } from 'react-router-dom';
 
 const MobileMenu = () => {
 
@@ -97,7 +97,7 @@ const MobileMenu = () => {
                 <ul className="mobile-menu-category-list">
 
                     <li className="menu-category">
-                        <a href="" className="menu-title">Home</a>
+                        <NavLink className="menu-title" to={'/'}>Home</NavLink>
                     </li>
 
                     {

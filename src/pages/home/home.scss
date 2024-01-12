@@ -1,4 +1,5 @@
 @import  '../../config/mixins.scss';
+@import  '../../config/Variables';
 
 .row {
     display: flex;
@@ -19,6 +20,7 @@
             font-size: 50px;
             line-height: 60px;
             margin: 25px;
+            color: $eerie-black;
         }
         p {
             margin: 25px;

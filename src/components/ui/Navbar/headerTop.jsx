@@ -30,8 +30,8 @@ const HeaderTop = () => {
 
                 <div className="header-alert-news">
                     <p>
-                        <b>Free Shipping</b> 
-                        This Week Order Over - रू5,500
+                        <b>Free Shipping!</b>‎ 
+                        This Week Order Over - <span className='primary'>रू5,500</span> 
                     </p>
                 </div>
 

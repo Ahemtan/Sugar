@@ -126,7 +126,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn {
   display: inline-block;
-  background-color: black;
+  background-color: $salmon-pink;
   color: #fff;
   padding: 8px 30px;
   border-radius: 30px;
@@ -184,4 +184,8 @@ button {
   .container {
     max-width: 1350px;
   }
+}
+
+.primary {
+  color: $salmon-pink;
 }

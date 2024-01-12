@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaPlus, FaMinus } from 'react-icons/fa'
+import { NavLink } from 'react-router-dom';
 const Submenu = (item) => {
 
     const [open, setOpen] = useState(false);
@@ -26,7 +27,7 @@ const Submenu = (item) => {
                     data.childrens.map((subdata, index) => {
                         return (
                             <li key={index} className="submenu-category">
-                                <a href={`/category/${subdata.href}`} className="submenu-title">{subdata.title}</a>
+                                <NavLink to={`/category/${subdata.href}`} className="submenu-title">{subdata.title}</NavLink>
                             </li>
                         )
                     })
