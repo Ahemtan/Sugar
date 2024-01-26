@@ -18,7 +18,12 @@
     scrollbar-width: none;  /* Firefox */
     @include sm {
         padding: 50px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
     }
+	@include xl {
+		grid-template-columns: repeat(4, 1fr);
+	}
 	.feature {
 		display: flex;
 		flex-direction: column;
@@ -26,9 +31,6 @@
 		text-align: center;
 		min-width: 100%;
 		scroll-snap-align: start;
-		@include sm {
-			min-width: 25%;
-		}
 	}
 	.featureIcon {
 		width: 50px;

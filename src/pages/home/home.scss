@@ -1,29 +1,38 @@
 @import  '../../config/mixins.scss';
 @import  '../../config/Variables';
 
-.row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    text-align: center;
-    .col-2{
-        flex-basis: 100%;
-        min-width: 300px;
-        img {
-            max-width: 100%;
+.hero {
+    font-family: Inter;
+    height: 450px;
+    padding: 16px;
+    .item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-radius: 8px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 40%;
+        @include sm {
+            background-position: 40%;
         }
-        @include lg {
-            flex-basis: 50%;
-        }
-        h1 {
-            font-size: 50px;
-            line-height: 60px;
-            margin: 25px;
-            color: $eerie-black;
-        }
-        p {
-            margin: 25px;
+        .content {
+            margin: 26px;
+            h1 {
+                line-height: 1.2;
+                font-size: 4.8rem;
+                font-weight: 500;
+            }
+            p {
+                margin-block: 16px 30px;
+                font-size: $fs-6;
+                @include sm {
+                    width: 350px;
+                }
+                @include md {
+                    width: 500px;
+                }
+            }
         }
     }
 }

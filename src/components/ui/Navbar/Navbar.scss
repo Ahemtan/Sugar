@@ -10,6 +10,9 @@
 .header-main {
   padding: 20px 0;
   border-bottom: 1px solid $cultured;
+  .container {
+    padding: 0 16px;
+  }
 }
 
 .header-logo {
@@ -303,14 +306,14 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding: 30px;
-    border: 1px solid var(--cultured);
+    border: 1px solid var($cultured);
     box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
-    border-radius: var(--border-radius-md);
+    border-radius: var($border-radius-md);
     transform: translateY(50px);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: var(--transition-timing);
+    transition: var($transition-timing);
     z-index: 5;
 
     .dropdown-panel-list {
@@ -357,16 +360,16 @@
     top: 100%;
     left: 0;
     width: 200px;
-    background: var(--white);
+    background: $white;
     padding: 20px 0;
-    border-radius: var(--border-radius-md);
-    border: 1px solid var(--cultured);
+    border-radius: $border-radius-md;
+    border: 1px solid $cultured;
     box-shadow: 0 3px 5px hsla(0, 0%, 0%, 0.1);
     transform: translateY(50px);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: var(--transition-timing);
+    transition: $transition-timing;
     z-index: 5;
   }
 
@@ -433,6 +436,7 @@
 
   .header-top .container,
   .header-main .container {
+    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
