@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaFacebook, FaInstagram, FaTiktok, FaTwitter } from "react-icons/fa"
 
 const HeaderTop = () => {

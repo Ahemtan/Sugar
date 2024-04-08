@@ -394,13 +394,12 @@
     }
   }
 }
-
 // Style for display more than 480px
 
 @include xsm {
   .header-top {
     display: block;
-    padding: 10px 0;
+    padding: 10px 16px;
     border-bottom: 1px solid $cultured;
   }
 
@@ -436,7 +435,6 @@
 
   .header-top .container,
   .header-main .container {
-    padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;

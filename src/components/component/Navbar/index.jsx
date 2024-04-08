@@ -1,4 +1,4 @@
-import { FaCartPlus, FaHeart, FaPersonBooth, FaPhone, FaSearch, FaUser } from "react-icons/fa";
+import { FaCartPlus, FaHeart, FaSearch, FaUser } from "react-icons/fa";
 import "./Navbar.scss"
 import HeaderTop from "./headerTop";
 import DesktopNav from "./desktopNav";

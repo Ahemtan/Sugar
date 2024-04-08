@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { FaBars, FaBoxes, FaHeart, FaHome, FaPlus, FaMinus, FaTruck, FaTimes, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
-import { IoCaretBack } from "react-icons/io5";
+import { useState } from 'react'
+import { FaBars, FaBoxes, FaHeart, FaHome, FaTruck, FaTimes, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import Submenu from './submenu';
-import { NavLink, Navigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const MobileMenu = () => {
 

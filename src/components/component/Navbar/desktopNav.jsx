@@ -1,5 +1,3 @@
-import React from 'react'
-
 const DesktopNav = () => {
     return (
         <nav className="desktop-navigation-menu">
@@ -33,7 +31,7 @@ const DesktopNav = () => {
                             </ul>
                             <ul className="dropdown-panel-list">
                                 <li className="menu-title">
-                                    <a href="#">Men's</a>
+                                    <a href="#">{"Men's"}</a>
                                 </li>
                                 <li className="panel-list-item">
                                     <a href="#">Formal</a>
@@ -53,7 +51,7 @@ const DesktopNav = () => {
                             </ul>
                             <ul className="dropdown-panel-list">
                                 <li className="menu-title">
-                                    <a href="#">Women's</a>
+                                    <a href="#">{"Women's"}</a>
                                 </li>
                                 <li className="panel-list-item">
                                     <a href="#">Formal</a>
@@ -94,7 +92,7 @@ const DesktopNav = () => {
                         </div>
                     </li>
                     <li className="menu-category">
-                        <a href="#" className="menu-title">Men's</a>
+                        <a href="#" className="menu-title">{"Men's"}</a>
                         <ul className="dropdown-list">
                             <li className="dropdown-item">
                                 <a href="#">Shirt</a>
@@ -111,7 +109,7 @@ const DesktopNav = () => {
                         </ul>
                     </li>
                     <li className="menu-category">
-                        <a href="#" className="menu-title">Women's</a>
+                        <a href="#" className="menu-title">{"Women's"}</a>
                         <ul className="dropdown-list">
                             <li className="dropdown-item">
                                 <a href="#">Dress &amp; Frock</a>

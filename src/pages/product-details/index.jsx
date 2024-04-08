@@ -2,12 +2,12 @@ import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import "./product-details.scss";
-import FeatureProduct from "../../components/ui/feature";
 import { useEffect } from "react";
 import { getProductDetails } from "../../redux/action/productAction";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import ErrorPage from "../error";
+import Latest from "../../components/component/Latest";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -66,7 +66,7 @@ const ProductDetails = () => {
             </div>
           </div>
         )}
-        <FeatureProduct />
+        <Latest />
       </>
     );
   }

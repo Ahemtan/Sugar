@@ -1,0 +1,73 @@
+@import "../../../config/mixins.scss";
+@import "../../../config/Variables";
+
+.banner {
+    width: 100%;
+    padding: 16px;
+
+    @include md {
+        height: 650px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        border-radius: 8px;
+        height: 100%;
+        overflow-y: hidden;
+
+        .col-2 {
+            flex-basis: 100%;
+            min-width: 300px;
+
+            @include md {
+                flex-basis: 50%;
+            }
+
+            img {
+                max-width: 100%;
+
+                @include md {
+                    max-width: 90%;
+                }
+            }
+
+            p {
+                margin-block: 16px 0;
+                font-size: 1.4rem;
+
+                @include md {
+                    font-size: 2rem;
+                }
+            }
+
+            h1 {
+                font-size: 45px;
+                line-height: 80px;
+                font-weight: 600;
+                color: $salmon-pink;
+
+                @include md {
+                    font-size: 90px;
+                    line-height: 128px;
+                }
+            }
+
+            small {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            button {
+                margin: 0.5rem 0;
+            }
+
+        }
+
+        .text-container {
+            padding: 50px;
+        }
+    }
+}

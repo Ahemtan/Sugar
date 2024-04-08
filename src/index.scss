@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap');
 @import "./config/Variables";
 @import "./config/mixins";
 
 body {
-  font-family: 'poppins', sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 *,
@@ -101,7 +102,27 @@ body::-webkit-scrollbar-thumb:hover {
   background: hsl(0, 0%, 70%);
 }
 
+.scrollbar-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+  @include  sm {
+    min-width: calc(50% - 15px);
+  }
+  @include lg {
+    min-width: calc(33.33% - 15px);
+  }
+  @include xl {
+    min-width: calc(20% - 24px);
+  }
+}
+
 .has-scrollbar {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-block-end: 15px;
+  margin-block-end: -15px;
+  scroll-snap-type: inline mandatory;
   padding-bottom: 5px;
 
   &::-webkit-scrollbar {
@@ -188,4 +209,29 @@ button {
 
 .primary {
   color: $salmon-pink;
+}
+
+.title-wrapper {
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-block-end: 50px;
+}
+
+.text {
+  font-weight: $weight-600;
+}
+
+.btn-link {
+  color: $eerie-black;
+  font-weight: $weight-300;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: $transition-timing;
+  svg {
+    transform: translateY(2px);
+  }
 }

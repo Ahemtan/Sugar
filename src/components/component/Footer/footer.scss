@@ -1,0 +1,58 @@
+@import "../../../config/Variables";
+@import "../../../config/mixins.scss";
+
+.footer {
+    background-color: white;
+    padding: 70px 0;
+
+    .container {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .footer-col {
+                flex-basis: 100%;
+                padding: 0 15px;
+                @include sm {
+                    flex-basis: 50%;
+                    justify-content: space-between;
+                }
+                @include md {
+                    flex-basis: 25%;
+                }
+
+                h4 {
+                    font-size: 24px;
+                    color: $eerie-black;
+                    margin-bottom: 10px;
+                    font-weight: 500;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: -5px;
+                        width: 20%;
+                        height: 2px;
+                        border-radius: 8px;
+                        background-color: $salmon-pink;
+                    }
+
+                    ul {
+                        list-style: none;
+                        li {
+                            a {
+                                font-size: 16px;
+                                &:hover {
+                                    color: $salmon-pink;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
