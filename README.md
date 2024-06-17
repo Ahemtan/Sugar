@@ -1,8 +1,20 @@
-# React + Vite
+![image](https://github.com/Ahemtan/Sugar/assets/87135144/ebe7a097-c21d-4a2e-9488-f9e01fe93749)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Sugar is multivendor ecommerce ui
 
-Currently, two official plugins are available:
+Sugar is made in react and scss for styling 💅 .You can use this design with or without credit 🪪. Its completely mobile 📱 responsive.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech
+<ul>
+  <li>React</li>
+  <li>Redux</li>
+  <li>Scss</li>
+</ul>
+
+### ⚠️ NOTE ⚠️
+Glitches and bug 🪲 can be found. And this is not complete. 
+I might or might not complete it!🥲
+<br />
+``` yarn install ``` 
+<br />
+``` yarn dev ``` 
